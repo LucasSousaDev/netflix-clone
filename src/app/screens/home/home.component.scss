@@ -1,26 +1,67 @@
 .hero{
-    background-image: url('/assets/images/kanye.jpg');
+    position: relative;
+    background-image: url('../../../assets/images/kanye.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
-}
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
 
-li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
 
-#btn-search {
-    background-color: rgb(0, 0, 0);
-    height: 20px;
-    width: 20px;
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-#btn-search:hover {
-    color: #ccc; 
-}
+    .hero-content {
+        background-color: rgba(0, 0, 0, 0); 
+        color: white;
+        padding: 10px; 
+    }
 
+    li a {
+        background-color: rgba(0, 0, 0, 0.5); 
+        color: white; 
+        padding: 10px; 
+    }
+
+    #btn-search {
+        background-color: rgb(0, 0, 0);
+        height: 20px;
+        width: 20px;
+        border: none;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #btn-search:hover {
+        color: #ccc; 
+    }
+
+    p{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400; /* Ou 400 para normal */
+        background-color: rgba(0, 0, 0, 0); 
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1{
+        background-color: rgba(0, 0, 0, 0); 
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.4em; 
+        color: white;
+    }
+
+    h2{
+        background-color: rgba(0, 0, 0, 0); 
+        font-size: 4rem;
+    }
+
+    span{
+        background-color: rgba(0, 0, 0, 0); 
+        letter-spacing: 0em;
+        font-weight: bold;
+    }
+
+}
