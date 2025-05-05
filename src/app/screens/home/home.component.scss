@@ -22,20 +22,7 @@
         padding: 10px; 
     }
 
-    #btn-search {
-        background-color: rgb(0, 0, 0);
-        height: 20px;
-        width: 20px;
-        border: none;
-        color: rgb(255, 255, 255);
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    #btn-search:hover {
-        color: #ccc; 
-    }
-
+   
     p{
         font-family: 'Open Sans', sans-serif;
         font-weight: 400; /* Ou 400 para normal */
@@ -65,3 +52,84 @@
     }
 
 }
+
+#btn-search {
+    width: 50px;          
+    height: 50px;
+    display: flex;       
+    align-items: center;  
+    justify-content: center; 
+    background-color: #000000; 
+    border: none;         
+    border-radius: 8px;   
+    cursor: pointer;      
+  
+    i { 
+      font-size: 1.5rem; 
+      color: white; 
+    }
+
+}
+
+header {
+    .main-nav {
+        background-color: #000; 
+        color: #fff;
+        padding: 1rem 0; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100; 
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between; /* Alterado para space-between */
+        align-items: center;
+        padding: 0 20px;
+      }
+      
+      .logo a {
+        color: #e50914;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+      
+      .nav-links li {
+        margin: 0 1.5rem; 
+      }
+      
+      .nav-links li:first-child {
+        margin-left: 0;
+      }
+      
+      .nav-links li:last-child {
+        margin-right: 0; 
+      }
+      
+      .nav-links a {
+        color: #fff; /* Cor branca dos links */
+        text-decoration: none; /* Remove o sublinhado dos links */
+        font-size: 1.3rem; /* Tamanho da fonte dos links */
+      }
+      
+      .nav-links a:hover {
+        color: #929292; /* Cor dos links ao passar o mouse (opcional) */
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      
+    
+}  
