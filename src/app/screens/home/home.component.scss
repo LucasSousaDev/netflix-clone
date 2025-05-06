@@ -1,171 +1,153 @@
-.hero{
-    position: relative;
-    background-image: url('../../../assets/images/kanye.jpg');
-    background-size: cover;
-    background-position: center center; /* Centraliza a imagem na tela */
-    max-width: 100%; 
-    height: 100vh; 
-    background-position: center;
+header {
+  .main-nav {
+    background-color: #000;
     color: #fff;
-    display: flex;
-    align-items: center;
-    padding: 0 4rem;
-    margin: 0;
-    
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 
-
-    .hero-content {
-        background-color: rgba(0, 0, 0, 0); 
-        color: white;
-        padding: 10px; 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
     }
 
-    li a {
-        background-color: rgba(0, 0, 0, 0.5); 
-        color: white; 
-        padding: 10px; 
+    .logo a {
+      color: #b20710;
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 10rem;
     }
 
-   
-    p{
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 400; /* Ou 400 para normal */
-        background-color: rgba(0, 0, 0, 0); 
-        font-size: 2rem;
-        margin: 0;
-        padding: 0;
-    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
 
-    h1{
-        background-color: rgba(0, 0, 0, 0); 
-        font-family: 'Montserrat', sans-serif;
-        font-weight: normal;
-        letter-spacing: 0.4em; 
-        color: white;
-    }
+      li {
+        margin: 0 1.5rem;
 
-    h2{
-        background-color: rgba(0, 0, 0, 0); 
-        font-size: 4rem;
-    }
+        &:first-child {
+          margin-left: 0;
+        }
 
-    span{
-        background-color: rgba(0, 0, 0, 0); 
-        letter-spacing: 0em;
-        font-weight: bold;
-    }
+        &:last-child {
+          margin-right: 0;
+        }
 
-    #btn-watch {
-      background-color: #ffffff; 
-      font-size: 1.4rem;
-      border: none;
-      border-radius: 3px;
-      margin-left: auto;
-      cursor: pointer;
-      color: #000000; /* Cor do texto (e do ícone, se não estilizado separadamente) branca */
-    }
-    
-    #btn-info {
-      background-color: #ffffff; 
-      font-size: 1.4rem;
-      border: none;
-      border-radius: 3px;
-      margin-left: auto;
-      cursor: pointer;
-      color: #000000; /* Cor do texto (e do ícone, se não estilizado separadamente) branca */
-    }
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.5rem;
 
-    #btn-info span{
-      font-size: 1.4rem;
-      color: #000000; /* Cor do texto (e do ícone, se não estilizado separadamente) branca */
+          &:hover {
+            color: #a8a8a8;
+            transition: 0.5s;
+            cursor: pointer;
+          }
+        }
+      }
     }
+  }
 }
 
 #btn-search {
-    width: 50px;          
-    height: 50px;
-    display: flex;       
-    align-items: center;  
-    justify-content: center; 
-    background-color: #000000; 
-    border: none;         
-    border-radius: 8px;  
-    margin-left: auto;
-    cursor: pointer;      
-  
-    i { 
-      font-size: 1.5rem; 
-      color: white; 
-    }
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+  margin-left: auto;
+  cursor: pointer;
 
-    #btn-search i:hover {
-      color: #e50914; 
-      transition: color 0.5s; 
-    }
+  i {
+    font-size: 1.5rem;
+    color: white;
 
+    &:hover {
+      color: #000;
+      transition: color 0.5s;
+    }
+  }
 }
 
-header {
-    .main-nav {
-        background-color: #000; 
-        color: #fff;
-        padding: 1rem 0; 
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 100; 
-      }
-      
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between; 
-        align-items: center;
-        padding: 0 20px;
-      }
-      
-      .logo a {
-        color: #b20710;
-        font-size: 2.8rem;
-        font-weight: bold;
-        text-decoration: none;
-        margin-right: 10rem;
-      }
-      
-      .nav-links {
-        display: flex;
-        gap: 1.5rem;
-        list-style: none;
+.hero {
+  position: relative;
+  background: url('../../../assets/images/kanye.jpg') center center / cover no-repeat;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: normal;
+      letter-spacing: 0.4em;
+      color: white;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    .info-container {
+      width: 100%;
+
+      p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
         margin: 0;
         padding: 0;
-        flex: 1; // ocupa o espaço entre logo e botão
       }
-      
-      .nav-links li {
-        margin: 0 1.5rem; 
-      }
-      
-      .nav-links li:first-child {
-        margin-left: 0;
-      }
-      
-      .nav-links li:last-child {
-        margin-right: 0; 
-      }
-      
-      .nav-links a {
-        color: #ffffff; 
-        text-decoration: none; 
-        font-size: 1.5rem; 
-      }
-      
-      .nav-links a:hover {
-        color: #a8a8a8; 
-        transition: 0.5s;
+    }
+
+    .btn-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      #btn-play,
+      #btn-info {
+        background-color: #fff;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        color: #000;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          font-size: 1.6rem;
+        }
       }
-      
-    
-}  
+    }
+  }
+}

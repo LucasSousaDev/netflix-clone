@@ -1,17 +1,27 @@
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
     background-color: black;
-    color: rgb(255, 255, 255);
+    color: white;
     font-family: Sans-serif;
 }
+
 
 .menu {
     display: flex;
     list-style: none;
-    gap: 2rem; // espaço entre os itens
+    gap: 2rem; 
     align-items: center;
     justify-content: center; 
     padding: 0;
     margin: 0;
-
+    color: white;
 }
 
+.menu a {
+    color: white;
+}
