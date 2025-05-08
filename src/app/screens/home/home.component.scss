@@ -89,7 +89,9 @@ header {
 
 .hero {
   position: relative;
-  background: url('../../../assets/images/money-heist.jpg') center center / cover no-repeat;
+  background:
+  linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0.2) 75%, transparent 100%),
+  url('../../../assets/images/money-heist.jpg') center center / cover no-repeat;
   height: 100vh;
   color: #fff;
   display: flex;
