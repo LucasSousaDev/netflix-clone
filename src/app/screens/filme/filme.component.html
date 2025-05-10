@@ -1,1 +1,4 @@
-<p>filme works!</p>
+<div class="filme-container">
+  <img [src]="fotoUrl" [alt]="titulo">
+  <div *ngIf="titulo" class="titulo-overlay">{{ titulo }}</div>
+</div>

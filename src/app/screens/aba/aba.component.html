@@ -1,1 +1,6 @@
-<p>aba works!</p>
+<div class="aba-container">
+  <h2>{{ tituloAba }}</h2>
+  <div class="lista-filmes">
+    <app-filme *ngFor="let filme of filmes" [fotoUrl]="filme.fotoUrl" [titulo]="filme.titulo"></app-filme>
+  </div>
+</div>

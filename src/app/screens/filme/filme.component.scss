@@ -1,0 +1,23 @@
+.filme-container {
+  position: relative;
+  display: inline-block; /* Para que os filmes fiquem lado a lado dentro da aba */
+  margin-right: 10px; /* Espaçamento entre os filmes */
+}
+
+.filme-container img {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  display: block;
+}
+
+.titulo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9em;
+}

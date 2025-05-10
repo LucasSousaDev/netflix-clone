@@ -1,0 +1,15 @@
+.aba-container {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.lista-filmes {
+  display: flex; /* Para dispor os filmes em linha */
+  flex-wrap: wrap; /* Para quebrar a linha em telas menores */
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}

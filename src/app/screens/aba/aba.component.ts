@@ -1,15 +1,16 @@
 import { Component, Input } from '@angular/core';
 
-interface Filme {
-  urlFoto: string;
-  titulo: string;
+interface FilmeData {
+  fotoUrl: string;
+  titulo?: string; // O título é opcional
 }
 
 @Component({
   selector: 'app-aba',
   templateUrl: './aba.component.html',
-  styleUrls: ['./aba.component.scss']
+  styleUrls: ['./aba.component.css']
 })
 export class AbaComponent {
-  @Input() filmes: Filme[] = []; 
+  @Input() filmes: FilmeData[] = []; // Recebe a lista de filmes do componente pai
+  @Input() tituloAba: string = 'Filmes'; 
 }
