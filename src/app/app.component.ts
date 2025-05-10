@@ -1,35 +1,27 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-
-interface FilmeData {
-  fotoUrl: string;
-  titulo?: string;
-}
+import { RouterOutlet, RouterLink } from '@angular/router';
+import { AbaComponent } from './screens/aba/aba.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  standalone: true,
+  imports: [RouterOutlet, RouterLink, AbaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'netflix';
-
-  filmesAcao: FilmeData[] = [
-    { fotoUrl: 'acao1.jpg', titulo: 'Missão Impossível 7' },
-    { fotoUrl: 'acao2.png', titulo: 'Velozes e Furiosos X' },
-    { fotoUrl: 'acao3.jpeg' }
+  filmesAcao = [
+    { titulo: 'Filme 1', fotoUrl: 'assets/images/filme1.jpg' },
+    { titulo: 'Filme 2', fotoUrl: 'assets/images/filme2.jpg' }
   ];
-
-  filmesComedia: FilmeData[] = [
-    { fotoUrl: 'comedia1.gif', titulo: 'Minha Mãe É Uma Peça 3' },
-    { fotoUrl: 'comedia2.bmp' },
+  filmesComedia = [
+    { titulo: 'Comédia 1', fotoUrl: 'assets/images/comedia1.jpg' },
+    { titulo: 'Comédia 2', fotoUrl: 'assets/images/comedia2.jpg' }
   ];
-
-  filmesDrama: FilmeData[] = [
-    { fotoUrl: 'drama1.webp', titulo: 'O Poderoso Chefão' },
-    { fotoUrl: 'drama2.tiff', titulo: 'Forrest Gump' },
-    { fotoUrl: 'drama3.svg' }
+  filmesDrama = [
+    { titulo: 'Drama 1', fotoUrl: 'assets/images/drama1.jpg' },
+    { titulo: 'Drama 2', fotoUrl: 'assets/images/drama2.jpg' }
   ];
 }
 

@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FilmeComponent } from '../filme/filme.component';
 
 interface FilmeData {
   fotoUrl: string;
@@ -7,10 +9,12 @@ interface FilmeData {
 
 @Component({
   selector: 'app-aba',
+  standalone: true,
+  imports: [CommonModule, FilmeComponent],
   templateUrl: './aba.component.html',
-  styleUrls: ['./aba.component.css']
+  styleUrl: './aba.component.scss'
 })
 export class AbaComponent {
-  @Input() filmes: FilmeData[] = []; // Recebe a lista de filmes do componente pai
-  @Input() tituloAba: string = 'Filmes'; 
+  @Input() filmes: any[] = [];
+  @Input() tituloAba: string = '';
 }

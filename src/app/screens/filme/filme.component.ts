@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-filme',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './filme.component.html',
-  styleUrls: ['./filme.component.scss']
+  styleUrl: './filme.component.scss'
 })
 export class FilmeComponent {
   @Input() fotoUrl: string = ''; // Recebe a URL da foto do componente pai
-  @Input() titulo: string = '';   // Opcional: Recebe o título do filme
+  @Input() titulo: string = 'Título do Filme';   // Opcional: Recebe o título do filme
 }
