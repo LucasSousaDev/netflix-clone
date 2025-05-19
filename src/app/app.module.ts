@@ -5,7 +5,8 @@ import { HomeComponent } from './screens/home/home.component';
 import { CadastroComponent } from './screens/cadastro/cadastro.component';
 import { FilmeComponent } from './screens/filme/filme.component';
 import { LoginComponent } from './screens/login/login.component';
-import { AppRoutingModule } from './app-routing.module'; // <- isso é essencial!
+import { AppRoutingModule } from './app-routing.module'; 
+import { AbaComponent } from './screens/aba/aba.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module'; // <- isso é essencial
     HomeComponent,
     CadastroComponent,
     FilmeComponent,
-    LoginComponent
+    LoginComponent,
+    AbaComponent
   ],
   imports: [
     BrowserModule,
