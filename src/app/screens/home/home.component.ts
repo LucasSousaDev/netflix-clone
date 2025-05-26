@@ -12,26 +12,27 @@ import { CarrosselComponent } from '../carrossel/carrossel.component';
 })
 export class HomeComponent {
   continuarAssistindo = [
-    { titulo: 'Stranger Things', fotoUrl: 'assets/images/stranger-things.jpg', progresso: 65 },
-    { titulo: 'Breaking Bad', fotoUrl: 'assets/images/breaking-bad.jpg', progresso: 30 },
-    { titulo: 'The Crown', fotoUrl: 'assets/images/crown.jpg', progresso: 45 },
-    { titulo: 'Dark', fotoUrl: 'assets/images/dark.jpg', progresso: 80 },
-    { titulo: 'The Witcher', fotoUrl: 'assets/images/witcher.jpg', progresso: 20 }
+    {  fotoUrl: 'assets/images/stranger.webp'},
+    {  fotoUrl: 'assets/images/breaking-bad.webp' },
+    {  fotoUrl: 'assets/images/you.webp'},
+    {  fotoUrl: 'assets/images/lucifer.webp' },
+    {  fotoUrl: 'assets/images/peaky-blinders.webp' },
+    {  fotoUrl: 'assets/images/the-witcher.webp' }
   ];
 
   filmesPopulares = [
-    { titulo: 'Oppenheimer', fotoUrl: 'assets/images/oppenheimer.jpg' },
-    { titulo: 'Barbie', fotoUrl: 'assets/images/barbie.jpg' },
-    { titulo: 'Interestelar', fotoUrl: 'assets/images/interstellar.jpg' },
-    { titulo: 'Duna', fotoUrl: 'assets/images/duna.jpg' },
-    { titulo: 'Avatar', fotoUrl: 'assets/images/avatar.jpg' }
+    {  fotoUrl: 'assets/images/oppenheimer.jpg' },
+    {  fotoUrl: 'assets/images/barbie.jpg' },
+    {  fotoUrl: 'assets/images/interstellar.jpg' },
+    {  fotoUrl: 'assets/images/duna.jpg' },
+    {  fotoUrl: 'assets/images/avatar.jpg' }
   ];
 
   seriesPopulares = [
-    { titulo: 'The Last of Us', fotoUrl: 'assets/images/last-of-us.jpg' },
-    { titulo: 'House of Dragon', fotoUrl: 'assets/images/house-dragon.jpg' },
-    { titulo: 'Wednesday', fotoUrl: 'assets/images/wednesday.jpg' },
-    { titulo: 'The Mandalorian', fotoUrl: 'assets/images/mandalorian.jpg' },
-    { titulo: 'Loki', fotoUrl: 'assets/images/loki.jpg' }
+    {  fotoUrl: 'assets/images/last-of-us.jpg' },
+    {  fotoUrl: 'assets/images/house-dragon.jpg' },
+    {  fotoUrl: 'assets/images/wednesday.jpg' },
+    {  fotoUrl: 'assets/images/mandalorian.jpg' },
+    {  fotoUrl: 'assets/images/loki.jpg' }
   ];
 }

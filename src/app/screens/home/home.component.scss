@@ -1,6 +1,6 @@
 header {
   .main-nav {
-    background-color: #000;
+    background: linear-gradient(to bottom, #000, #141414);
     color: #fff;
     padding: 1rem 0;
     position: fixed;
@@ -69,7 +69,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #00000000;
   border: none;
   border-radius: 8px;
   margin-left: auto;
@@ -97,6 +97,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0 4rem;
+
 
   .hero-content {
     display: flex;
@@ -178,4 +179,17 @@ header {
         }
 
   }
+
+
+
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #141414, transparent);
 }
