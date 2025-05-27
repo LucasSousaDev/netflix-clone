@@ -1,28 +1,31 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-carrossel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgIf, NgFor],
   templateUrl: './carrossel.component.html',
   styleUrl: './carrossel.component.scss'
 })
-export class CarrosselComponent {
+export class CarrosselComponent implements AfterViewInit {
   @Input() titulo: string = '';
   @Input() filmes: any[] = [];
 
+  @ViewChild('carrosselRef', { static: false }) carrosselRef?: ElementRef<HTMLDivElement>;
+
+  ngAfterViewInit() {
+  setTimeout(() => {
+    console.log(`[${this.titulo}] carrossel carregado`, this.carrosselRef?.nativeElement);
+  });
+}
+
   scrollLeft() {
-    const carrossel = document.querySelector('.carrossel') as HTMLElement;
-    if (carrossel) {
-      carrossel.scrollBy({ left: -400, behavior: 'smooth' });
-    }
+    this.carrosselRef?.nativeElement?.scrollBy({ left: -400, behavior: 'smooth' });
   }
 
   scrollRight() {
-    const carrossel = document.querySelector('.carrossel') as HTMLElement;
-    if (carrossel) {
-      carrossel.scrollBy({ left: 400, behavior: 'smooth' });
-    }
+    this.carrosselRef?.nativeElement?.scrollBy({ left: 400, behavior: 'smooth' });
   }
-} 
+}

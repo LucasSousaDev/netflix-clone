@@ -20,19 +20,20 @@ export class HomeComponent {
     {  fotoUrl: 'assets/images/the-witcher.webp' }
   ];
 
-  filmesPopulares = [
-    {  fotoUrl: 'assets/images/oppenheimer.jpg' },
-    {  fotoUrl: 'assets/images/barbie.jpg' },
-    {  fotoUrl: 'assets/images/interstellar.jpg' },
-    {  fotoUrl: 'assets/images/duna.jpg' },
-    {  fotoUrl: 'assets/images/avatar.jpg' }
+  animesPopulares = [
+    {  fotoUrl: 'assets/images/jojo.webp' },
+    {  fotoUrl: 'assets/images/cyberpunk.webp' },
+    {  fotoUrl: 'assets/images/jujutsu.webp' },
+    {  fotoUrl: 'assets/images/hunter.webp' },
+    {  fotoUrl: 'assets/images/naruto.webp' },
+    {  fotoUrl: 'assets/images/nanatsu.webp' }
   ];
 
   seriesPopulares = [
-    {  fotoUrl: 'assets/images/last-of-us.jpg' },
-    {  fotoUrl: 'assets/images/house-dragon.jpg' },
-    {  fotoUrl: 'assets/images/wednesday.jpg' },
-    {  fotoUrl: 'assets/images/mandalorian.jpg' },
-    {  fotoUrl: 'assets/images/loki.jpg' }
+    {  fotoUrl: 'assets/images/last-of-us.webp' },
+    {  fotoUrl: 'assets/images/house-dragon.webp' },
+    {  fotoUrl: 'assets/images/wednesday.webp' },
+    {  fotoUrl: 'assets/images/mandalorian.webp' },
+    {  fotoUrl: 'assets/images/loki.webp' }
   ];
 }
