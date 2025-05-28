@@ -30,10 +30,11 @@ export class HomeComponent {
   ];
 
   seriesPopulares = [
-    {  fotoUrl: 'assets/images/last-of-us.webp' },
-    {  fotoUrl: 'assets/images/house-dragon.webp' },
-    {  fotoUrl: 'assets/images/wednesday.webp' },
-    {  fotoUrl: 'assets/images/mandalorian.webp' },
-    {  fotoUrl: 'assets/images/loki.webp' }
+    {  fotoUrl: 'assets/images/arcane.webp' },
+    {  fotoUrl: 'assets/images/twd.webp' },
+    {  fotoUrl: 'assets/images/dexter.webp' },
+    {  fotoUrl: 'assets/images/rick.webp' },
+    {  fotoUrl: 'assets/images/better.webp' },
+    {  fotoUrl: 'assets/images/dante.webp' }
   ];
 }
