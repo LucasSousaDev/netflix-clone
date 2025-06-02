@@ -17,7 +17,8 @@ export class HomeComponent {
     {  fotoUrl: 'assets/images/you.webp'},
     {  fotoUrl: 'assets/images/lucifer.webp' },
     {  fotoUrl: 'assets/images/peaky-blinders.webp' },
-    {  fotoUrl: 'assets/images/the-witcher.webp' }
+    {  fotoUrl: 'assets/images/the-witcher.webp' },
+    {  fotoUrl: 'assets/images/tropa-elite.webp' }
   ];
 
   animesPopulares = [

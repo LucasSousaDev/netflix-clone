@@ -27,7 +27,7 @@
 
 .filme-card {
   flex: 0 0 auto;
-  width: 420px;
+  width: 375px;
   height: 220px;
   transition: transform 0.3s;
   cursor: pointer;
@@ -74,8 +74,8 @@
   border: none;
   color: white;
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  height: 220px;
+  border-radius: 0%;
   cursor: pointer;
   z-index: 3;
   display: flex;

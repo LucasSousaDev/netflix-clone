@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { FilmeComponent } from './components/filme/filme.component';
-import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './screens/home/home.component';
+import { CadastroComponent } from './screens/cadastro/cadastro.component';
+import { FilmeComponent } from './screens/filme/filme.component';
+import { LoginComponent } from './screens/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
