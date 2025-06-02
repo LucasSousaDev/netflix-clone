@@ -1,11 +1,11 @@
 <div class="carrossel-container">
   <h2 class="titulo-secao">{{ titulo }}</h2>
   <div class="carrossel-wrapper">
-    <button class="btn-nav btn-prev" (click)="scrollLeft()">
+    <button class="btn-nav btn-prev" (click)="scrollLeft()" *ngIf="showNavPrev">
       <i class="bi bi-chevron-left"></i>
     </button>
 
-    <div class="carrossel" #carrosselRef>
+    <div class="carrossel" #carrosselRef (scroll)="onScroll($event.target)">
       <div class="filme-card" *ngFor="let filme of filmes">
         <img [src]="filme.fotoUrl" [alt]="filme.titulo">
         <div class="filme-info">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <button class="btn-nav btn-next" (click)="scrollRight()">
+    <button class="btn-nav btn-next" (click)="scrollRight()" *ngIf="showNavNext">
       <i class="bi bi-chevron-right"></i>
     </button>
   </div>
