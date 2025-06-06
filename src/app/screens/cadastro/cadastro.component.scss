@@ -1,0 +1,101 @@
+.cadastro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #000;
+  padding-top: 50px;
+  font-family: 'Arial', sans-serif;
+}
+
+.netflix-logo {
+  margin-bottom: 20px;
+}
+
+.netflix-logo img {
+  height: 50px;
+  display: block;
+}
+
+.form-wrapper {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.select-wrapper {
+  position: relative;
+  margin-bottom: 15px; /* Adicionado para espaçamento */
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; /* Reduzido para não ter margin-bottom dupla com o select-wrapper */
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  box-sizing: border-box;
+
+ 
+  -webkit-appearance: none; /* Esconde a seta padrão no WebKit (Chrome, Safari) */
+  -moz-appearance: none;    /* Esconde a seta padrão no Mozilla (Firefox) */
+  appearance: none;         /* Esconde a seta padrão */
+  padding-right: 35px;      /* Aumenta o padding à direita para dar espaço ao ícone */
+  
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%; /* Alinha verticalmente */
+  right: 15px; /* Posição do ícone à direita, ajuste conforme o padding-right do select */
+  pointer-events: none; /* Garante que você ainda possa clicar no select */
+  color: #fff; /* Cor do ícone (branco como o texto) */
+  font-size: 0.7em; /* Tamanho do ícone, ajuste conforme necessário */
+
+}
+
+
+button#btn-register {
+  width: 100%;
+  background-color: #e50914;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button#btn-register:hover {
+  background-color: #c60711;
+}
