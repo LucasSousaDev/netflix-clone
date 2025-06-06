@@ -27,7 +27,8 @@ export class HomeComponent {
     {  fotoUrl: 'assets/images/jujutsu.webp' },
     {  fotoUrl: 'assets/images/hunter.webp' },
     {  fotoUrl: 'assets/images/naruto.webp' },
-    {  fotoUrl: 'assets/images/nanatsu.webp' }
+    {  fotoUrl: 'assets/images/nanatsu.webp' },
+    {  fotoUrl: 'assets/images/dandadan.webp' }
   ];
 
   seriesPopulares = [
@@ -36,6 +37,7 @@ export class HomeComponent {
     {  fotoUrl: 'assets/images/dexter.webp' },
     {  fotoUrl: 'assets/images/rick.webp' },
     {  fotoUrl: 'assets/images/better.webp' },
-    {  fotoUrl: 'assets/images/dante.webp' }
+    {  fotoUrl: 'assets/images/dante.webp' },
+    {  fotoUrl: 'assets/images/round-six.webp' }
   ];
 }
