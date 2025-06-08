@@ -1,101 +1,136 @@
 .cadastro-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  background-color: #000;
-  padding-top: 50px;
-  font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; // Alinha ao topo
+    min-height: 100vh;
+    background-color: #000; // Fundo preto da Netflix
+    padding-top: 50px; // Espaço do topo
+    font-family: 'Arial', sans-serif; // Fonte padrão
+    font-weight: bold; 
+    color: #fff; // Cor do texto principal
+
+    @media (max-width: 600px) {
+        padding-top: 20px; // Menos padding em telas menores
+    }
 }
 
 .netflix-logo {
-  margin-bottom: 20px;
-}
+    margin-bottom: 20px; // Espaço abaixo do logo
 
-.netflix-logo img {
-  height: 50px;
-  display: block;
+    img {
+        height: 50px; // Altura do logo
+        display: block; // Garante que a imagem se comporte como um bloco
+        max-width: 100%; // Garante que a imagem não transborde
+    }
 }
 
 .form-wrapper {
-  width: 90%;
-  max-width: 400px;
-  padding: 20px;
-  color: #fff;
-}
+    width: 90%; // Largura padrão do formulário
+    max-width: 400px; // Largura máxima para desktop
+    padding: 20px; // Padding interno do formulário
+    // Cor do texto já definida no .cadastro-container
 
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em; // Tamanho do título
+        font-weight: bold; // Negrito
+    }
+
+    
 }
 
 .form-group {
-  margin-bottom: 15px;
-}
+    margin-bottom: 15px; // Espaço entre os grupos de formulário
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+    label {
+        display: block; // Label em sua própria linha
+        margin-bottom: 5px; // Espaço abaixo da label
+        font-weight: 500; // Peso da fonte da label
+    }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  box-sizing: border-box;
+    input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333; // Fundo escuro para input
+        color: #fff; // Cor do texto do input
+        box-sizing: border-box; // Inclui padding e border na largura
+        outline: none; // Remove o contorno de foco padrão
+
+        &:focus {
+            border: 1px solid #0071eb; // Borda ao focar, cor Netflix
+        }
+
+        &::placeholder {
+            color: #aaa; // Cor do placeholder
+        }
+    }
 }
 
 .select-wrapper {
-  position: relative;
-  margin-bottom: 15px; /* Adicionado para espaçamento */
+    position: relative; // Necessário para posicionar a seta
+    margin-bottom: 15px; // Espaço entre os selects
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+        box-sizing: border-box;
+        outline: none;
+
+        // Esconde a seta padrão do select
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: 35px; // Aumenta o padding à direita para o ícone
+
+        &:focus {
+            border: 1px solid #0071eb;
+        }
+
+        // Estilo da primeira opção (placeholder)
+        option[value=""][disabled] {
+            color: #aaa; // Cor do placeholder
+        }
+    }
+
+    .select-arrow {
+        position: absolute;
+        top: 50%; 
+        right: 15px;
+        transform: translateY(2px); // Ajuste fino para centralizar com o texto
+        pointer-events: none; // Permite cliques através do ícone no select
+        color: #fff; // Cor do ícone
+        font-size: 0.7em; // Tamanho do ícone
+    }
 }
-
-select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px; /* Reduzido para não ter margin-bottom dupla com o select-wrapper */
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  box-sizing: border-box;
-
- 
-  -webkit-appearance: none; /* Esconde a seta padrão no WebKit (Chrome, Safari) */
-  -moz-appearance: none;    /* Esconde a seta padrão no Mozilla (Firefox) */
-  appearance: none;         /* Esconde a seta padrão */
-  padding-right: 35px;      /* Aumenta o padding à direita para dar espaço ao ícone */
-  
-}
-
-.select-arrow {
-  position: absolute;
-  top: 50%; /* Alinha verticalmente */
-  right: 15px; /* Posição do ícone à direita, ajuste conforme o padding-right do select */
-  pointer-events: none; /* Garante que você ainda possa clicar no select */
-  color: #fff; /* Cor do ícone (branco como o texto) */
-  font-size: 0.7em; /* Tamanho do ícone, ajuste conforme necessário */
-
-}
-
 
 button#btn-register {
-  width: 100%;
-  background-color: #e50914;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
+    width: 100%;
+    background-color: #e50914; 
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold; 
+    transition: background-color 0.3s ease; // Transição suave para o hover
+    margin-top: 10px; // Espaço acima do botão
 
-button#btn-register:hover {
-  background-color: #c60711;
+    &:hover {
+        background-color: #c60711; // Tom mais escuro de vermelho no hover
+    }
 }

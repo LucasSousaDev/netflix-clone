@@ -1,46 +1,46 @@
 <div class="cadastro-container">
-  <div class="netflix-logo">
-    <img src="assets/logo/Netflix_Logo_RGB.png" alt="Netflix Logo">
-  </div>
+    <div class="netflix-logo">
+        <img src="assets/logo/Netflix_Logo_RGB.png" alt="Netflix Logo">
+    </div>
 
-  <div class="form-wrapper">
-    <h2>Cadastro</h2>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" placeholder="E-mail" name="email" required [(ngModel)]="cadastroForm.email">
-      </div>
+    <div class="form-wrapper">
+        <h2>Cadastro</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="E-mail">
+            </div>
 
-      <div class="form-group">
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" placeholder="Senha" name="senha" required [(ngModel)]="cadastroForm.senha">
-      </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" placeholder="Senha">
+            </div>
 
-      <div class="select-wrapper">
-        <label for="plan-selection">Escolha um plano:</label>
-        <select id="plan-selection" name="plan-selection" required [(ngModel)]="cadastroForm.plan">
-          <option value="standard">Padrão</option>
-          <option value="standard-ad">Padrão com Anúncios</option>
-          <option value="premium">Premium</option>
-        </select>
-        <div class="select-arrow">
-          <i class="bi bi-chevron-down"></i>
-        </div>
-      </div>
+            <div class="select-wrapper">
+                <label for="plan-selection">Escolha um plano:</label>
+                <select id="plan-selection">
+                    <option value="standard">Padrão</option>
+                    <option value="standard-ad">Padrão com Anúncios</option>
+                    <option value="premium">Premium</option>
+                </select>
+                <div class="select-arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
 
-      <div class="select-wrapper">
-        <label for="payment-method">Forma de pagamento:</label>
-        <select id="payment-method" name="payment-method" required [(ngModel)]="cadastroForm.paymentMethod">
-          <option value="" disabled selected>Cartão de crédito ou Cartão de débito</option>
-          <option value="credit">Cartão de crédito</option>
-          <option value="debit">Cartão de débito</option>
-        </select>
-        <div class="select-arrow">
-          <i class="bi bi-chevron-down"></i>
-        </div>
-      </div>
+            <div class="select-wrapper">
+                <label for="payment-method">Forma de pagamento:</label>
+                <select id="payment-method">
+                    <option value="" disabled selected>Cartão de crédito ou Cartão de débito</option>
+                    <option value="credit">Cartão de crédito</option>
+                    <option value="debit">Cartão de débito</option>
+                </select>
+                <div class="select-arrow">
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+            </div>
 
-      <button id="btn-register" type="submit">CADASTRAR</button>
-    </form>
-  </div>
+            <button id="btn-register" type="submit">CADASTRAR</button>
+        </form>
+    </div>
 </div>
