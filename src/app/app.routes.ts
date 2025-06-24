@@ -9,5 +9,6 @@ export const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'home', component: HomeComponent },
   { path: 'filme', component: FilmeComponent },
+  { path: 'filme/:id', component: FilmeComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];

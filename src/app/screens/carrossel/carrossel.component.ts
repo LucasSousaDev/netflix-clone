@@ -1,5 +1,6 @@
 import { Component, Input, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule, NgIf, NgFor } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrossel',
@@ -25,6 +26,12 @@ export class CarrosselComponent implements AfterViewInit {
       console.log(`[${this.titulo}] carrossel carregado`, this.carrosselRef?.nativeElement);
     });
   }
+
+  constructor(private router: Router) {}
+
+irParaDetalhes(filmeId: number) {
+  this.router.navigate(['/filme', filmeId]);
+}
 
   // Modificação aqui: Aceitar EventTarget e verificar se é um HTMLElement
   @HostListener('scroll', ['$event.target'])

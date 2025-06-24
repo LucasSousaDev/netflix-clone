@@ -11,7 +11,7 @@ import { ApiService } from '../../services/api.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   continuarAssistindo = [
     { fotoUrl: 'assets/images/stranger.webp' },
     { fotoUrl: 'assets/images/breaking-bad.webp' },
@@ -42,23 +42,4 @@ export class HomeComponent implements OnInit {
     { fotoUrl: 'assets/images/round-six.webp' }
   ];
 
-  filmesApi: any[] = []; // filmes que vêm da API
-
-  constructor(private apiService: ApiService) {}
-
-  ngOnInit(): void {
-    this.getFilmes(); // chama a API quando o componente iniciar
-  }
-
-  getFilmes(): void {
-    this.apiService.getFilmes().subscribe(
-      (res: any) => {
-        this.filmesApi = res;
-        console.log('Filmes da API:', this.filmesApi);
-      },
-      (err: any) => {
-        console.error('Erro ao buscar filmes da API:', err);
-      }
-    );
-  }
 }

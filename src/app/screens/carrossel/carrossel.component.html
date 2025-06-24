@@ -6,14 +6,11 @@
     </button>
 
     <div class="carrossel" #carrosselRef (scroll)="onScroll($event.target)">
-      <div class="filme-card" *ngFor="let filme of filmes">
+      <div class="filme-card" *ngFor="let filme of filmes" (click)="irParaDetalhes(filme.id)">
         <img [src]="filme.fotoUrl" [alt]="filme.titulo">
-        <div class="filme-info">
-          <h3>{{ filme.titulo }}</h3>
-          <p *ngIf="filme.progresso">Assistido: {{ filme.progresso }}%</p>
-        </div>
       </div>
     </div>
+
 
     <button class="btn-nav btn-next" (click)="scrollRight()" *ngIf="showNavNext">
       <i class="bi bi-chevron-right"></i>
