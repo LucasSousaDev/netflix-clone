@@ -6,7 +6,8 @@ import { CadastroComponent } from './screens/cadastro/cadastro.component';
 import { FilmeComponent } from './screens/filme/filme.component';
 import { LoginComponent } from './screens/login/login.component';
 import { AppRoutingModule } from './app-routing.module'; 
-import { AbaComponent } from './screens/aba/aba.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,11 +16,11 @@ import { AbaComponent } from './screens/aba/aba.component';
     CadastroComponent,
     FilmeComponent,
     LoginComponent,
-    AbaComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
