@@ -1,4 +1,4 @@
 <div class="filme-container">
-  <img [src]="fotoUrl" [alt]="titulo">
-  <div *ngIf="titulo" class="titulo-overlay">{{ titulo }}</div>
+  <img [src]="filme?.fotoUrl" [alt]="filme?.titulo">
+  <div *ngIf="filme?.titulo" class="titulo-overlay">{{ filme?.titulo }}</div>
 </div>

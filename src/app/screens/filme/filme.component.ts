@@ -1,17 +1,18 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core'; 
+import { CommonModule, NgIf, NgFor } from '@angular/common'; 
 
 @Component({
   selector: 'app-filme',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: true, 
+  imports: [CommonModule, NgIf, NgFor], 
   templateUrl: './filme.component.html',
-  styleUrl: './filme.component.scss'
+  styleUrls: ['./filme.component.scss']
 })
-
 export class FilmeComponent {
-  @Input() fotoUrl: string = ''; // Recebe a URL da foto do componente pai
-  @Input() titulo: string = 'Título do Filme';   // Opcional: Recebe o título do filme
-}
+  @Input() filme: any; 
+  @Output() fechar = new EventEmitter<void>();
 
+  onFecharClick() {
+    this.fechar.emit();
+  }
+}

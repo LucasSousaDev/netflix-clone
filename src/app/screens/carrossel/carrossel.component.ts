@@ -1,6 +1,6 @@
-import { Component, Input, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, AfterViewInit, HostListener, Output, EventEmitter } from '@angular/core'; // Adicionado Output e EventEmitter
 import { CommonModule, NgIf, NgFor } from '@angular/common';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router'; // Não precisamos mais do Router para o pop-up
 
 @Component({
   selector: 'app-carrossel',
@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class CarrosselComponent implements AfterViewInit {
   @Input() titulo: string = '';
   @Input() filmes: any[] = [];
+  @Output() filmeClicado = new EventEmitter<any>(); // NOVO: Evento para emitir o filme clicado
 
   @ViewChild('carrosselRef', { static: false }) carrosselRef?: ElementRef<HTMLDivElement>;
 
@@ -27,22 +28,18 @@ export class CarrosselComponent implements AfterViewInit {
     });
   }
 
-  constructor(private router: Router) {}
-
-irParaDetalhes(filmeId: number) {
-  this.router.navigate(['/filme', filmeId]);
-}
+  onFilmeClick(filme: any) {
+    console.log('Filme clicado:', filme); 
+    this.filmeClicado.emit(filme); 
+  }
 
   // Modificação aqui: Aceitar EventTarget e verificar se é um HTMLElement
   @HostListener('scroll', ['$event.target'])
-  onScroll(targetElement: EventTarget | null) { // Altere o tipo para EventTarget | null
-    // Verifica se o targetElement existe e é um HTMLElement antes de passá-lo
+  onScroll(targetElement: EventTarget | null) {
     if (targetElement instanceof HTMLElement) {
-      this.updateNavigationButtonsVisibility(targetElement); // Passa o elemento para a função de atualização
+      this.updateNavigationButtonsVisibility(targetElement);
     } else {
-      // Opcional: Lidar com o caso em que targetElement não é um HTMLElement
-      // console.warn('Evento de scroll em um elemento não-HTMLElement:', targetElement);
-      this.updateNavigationButtonsVisibility(); // Reavalia a visibilidade sem o elemento do evento
+      this.updateNavigationButtonsVisibility();
     }
   }
 
@@ -63,9 +60,7 @@ irParaDetalhes(filmeId: number) {
     }
   }
 
-  // Modificação aqui: Receber um HTMLElement opcionalmente ou usar o carrosselRef padrão
   private updateNavigationButtonsVisibility(element?: HTMLElement): void {
-    // Prioriza o elemento passado (do evento de scroll), caso contrário, usa o carrosselRef
     const carrosselElement = element || this.carrosselRef?.nativeElement;
 
     if (!carrosselElement) {
