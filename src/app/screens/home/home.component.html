@@ -43,22 +43,20 @@
     <app-carrossel
         [titulo]="'Continuar Assistindo'"
         [filmes]="continuarAssistindo"
-        (filmeClicado)="abrirPopupFilme($event)"> </app-carrossel>
+        (filmeClicado)="abrirPopupFilme($event)">
+    </app-carrossel>
 
     <app-carrossel
         [titulo]="'Animes Populares'"
         [filmes]="animesPopulares"
-        (filmeClicado)="abrirPopupFilme($event)"> </app-carrossel>
+        (filmeClicado)="abrirPopupFilme($event)">
+    </app-carrossel>
 
     <app-carrossel
         [titulo]="'Séries Populares'"
         [filmes]="seriesPopulares"
-        (filmeClicado)="abrirPopupFilme($event)"> </app-carrossel>
+        (filmeClicado)="abrirPopupFilme($event)">
+    </app-carrossel>
 
-    <app-filme
-        *ngIf="isPopupOpen && filmeSelecionado"
-       
-        (fechar)="fecharPopup()">
-    </app-filme>
+    <app-filme *ngIf="isPopupOpen && filmeSelecionado" [filme]="filmeSelecionado" (fechar)="fecharPopup()"></app-filme>
 </section>
-

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
   ];
 
   animesPopulares = [
-    { id: 8, titulo: 'Jojo\'s Bizarre Adventure', fotoUrl: 'assets/images/jojo.webp', descricao: 'A saga da família Joestar e sua batalha contra o mal...' },
+    { id: 8, titulo: 'Jojo Bizarre Adventure', fotoUrl: 'assets/images/jojo.webp', descricao: 'A saga da família Joestar e sua batalha contra o mal...' },
     { id: 9, titulo: 'Cyberpunk Edgerunners', fotoUrl: 'assets/images/cyberpunk.webp', descricao: 'Um garoto de rua que tenta sobreviver em uma cidade futurista...' },
     { id: 10, titulo: 'Jujutsu Kaisen', fotoUrl: 'assets/images/jujutsu.webp', descricao: 'Um estudante que engole um dedo amaldiçoado e entra no mundo dos feiticeiros jujutsu...' },
     { id: 11, titulo: 'Hunter x Hunter', fotoUrl: 'assets/images/hunter.webp', descricao: 'Gon Freecss deixa sua casa para fazer o Exame Hunter e encontrar seu pai...' },
@@ -48,6 +48,7 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
   filmeSelecionado: any | null = null; // Armazena o filme que será exibido no pop-up
   isPopupOpen: boolean = false; // Controla a visibilidade do pop-up
 
+  
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {

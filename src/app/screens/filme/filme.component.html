@@ -1,4 +1,36 @@
-<div class="filme-container">
-  <img [src]="filme?.fotoUrl" [alt]="filme?.titulo">
-  <div *ngIf="filme?.titulo" class="titulo-overlay">{{ filme?.titulo }}</div>
+<div class="pop-up-overlay" *ngIf="filme">
+    <div class="filme-pop-up-content">
+        <div class="popup-img-wrapper">
+            <img [src]="filme?.fotoUrl" [alt]="filme?.titulo" class="popup-img">
+            <div class="popup-gradient"></div>
+            <button class="close-btn" (click)="onFecharClick()">&times;</button>
+            <div class="popup-header-content">
+                <h2>{{ filme?.titulo }}</h2>
+                <div class="popup-btns">
+                    <button class="play-btn">
+                        <i class="bi bi-play-fill"></i><span>Assistir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="popup-info-row">
+            <div class="popup-info-main">
+                <div class="popup-meta-row">
+                    <span class="popup-meta">2013</span>
+                    <span class="popup-meta">8 temporadas</span>
+                    <span class="hd-badge">HD</span>
+                </div>
+                <div class="popup-class-row">
+                    <span class="popup-class">18</span>
+                    <span class="popup-class-desc">violência extrema, conteúdo sexual, drogas</span>
+                </div>
+                <div class="popup-desc">{{ filme?.descricao }}</div>
+            </div>
+            <div class="popup-info-side">
+                <div><span class="popup-label">Elenco:</span> Michael C. Hall, Jennifer Carpenter, David Zayas, <span class="popup-more">mais</span></div>
+                <div><span class="popup-label">Gêneros:</span> Séries dramáticas, Séries baseadas em livros, Séries de mistério</div>
+                <div><span class="popup-label">Esta série é:</span> Sinistro, Sombrio</div>
+            </div>
+        </div>
+    </div>
 </div>

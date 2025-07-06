@@ -12,8 +12,7 @@ import { CommonModule, NgIf, NgFor } from '@angular/common';
 export class CarrosselComponent implements AfterViewInit {
   @Input() titulo: string = '';
   @Input() filmes: any[] = [];
-  @Output() filmeClicado = new EventEmitter<any>(); // NOVO: Evento para emitir o filme clicado
-
+  @Output() filmeClicado = new EventEmitter<any>(); 
   @ViewChild('carrosselRef', { static: false }) carrosselRef?: ElementRef<HTMLDivElement>;
 
   showNavPrev: boolean = false;
