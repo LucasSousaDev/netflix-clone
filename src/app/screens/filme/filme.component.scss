@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    transition: opacity 0.3s ease-out;
 }
 .filme-pop-up-content {
     background: #181818;
@@ -22,6 +23,7 @@
     min-height: 95vh;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 .popup-img-wrapper {
     position: relative;
@@ -62,9 +64,7 @@
     justify-content: center;
     transition: background 0.2s;
 }
-.close-btn:hover {
-    background: #e50914;
-}
+
 .popup-header-content {
     position: absolute;
     left: 0; bottom: 2rem;
@@ -235,3 +235,17 @@
     from { transform: translateY(40px) scale(0.98); opacity: 0; }
     to { transform: translateY(0) scale(1); opacity: 1; }
 }
+
+@keyframes popup-fade-out {
+    from { transform: translateY(0) scale(1); opacity: 1; }
+    to { transform: translateY(40px) scale(0.98); opacity: 0; }
+}
+
+.popup-closing {
+    animation: popup-fade-out 0.3s ease-in forwards;
+}
+
+.overlay-closing {
+    opacity: 0;
+}
+

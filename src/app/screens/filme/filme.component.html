@@ -1,5 +1,5 @@
-<div class="pop-up-overlay" *ngIf="filme">
-    <div class="filme-pop-up-content">
+<div class="pop-up-overlay" *ngIf="filme" [class.overlay-closing]="isClosing">
+    <div class="filme-pop-up-content" [class.popup-closing]="isClosing">
         <div class="popup-img-wrapper">
             <img [src]="filme?.fotoUrl" [alt]="filme?.titulo" class="popup-img">
             <div class="popup-gradient"></div>
