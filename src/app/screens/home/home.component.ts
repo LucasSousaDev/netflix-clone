@@ -48,7 +48,14 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
   filmeSelecionado: any | null = null; // Armazena o filme que será exibido no pop-up
   isPopupOpen: boolean = false; // Controla a visibilidade do pop-up
 
-  
+  // Objeto para "La Casa de Papel" (filme em destaque)
+  filmeHero = {
+    id: 0,
+    titulo: 'LA CASA DE PAPEL',
+    fotoUrl: 'assets/images/money-heist.jpg',
+    descricao: 'Oito ladrões fazem reféns e trancam-se na Casa da Moeda da Espanha enquanto um gênio do crime manipula a polícia do lado de fora.'
+  };
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
@@ -71,5 +78,12 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
     this.isPopupOpen = false; // Fecha o pop-up
     this.filmeSelecionado = null; // Limpa o filme selecionado
     console.log('Fechando pop-up.'); // Para depuração
+  }
+
+  // Método para abrir o popup do filme em destaque (La Casa de Papel)
+  abrirPopupHero() {
+    this.filmeSelecionado = this.filmeHero;
+    this.isPopupOpen = true;
+    console.log('Abrindo pop-up do filme hero:', this.filmeHero);
   }
 }
