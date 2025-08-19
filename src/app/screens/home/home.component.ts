@@ -13,7 +13,7 @@ import { FilmeComponent } from '../filme/filme.component'; // Importe o componen
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit { // Implemente OnInit para usar ngOnInit
-  // Suas listas de filmes (você pode carregar elas da API, se quiser)
+  // Suas listas de filmes
   continuarAssistindo = [
     { id: 1, titulo: 'Stranger Things', fotoUrl: 'assets/images/stranger.webp', descricao: 'Um grupo de amigos descobre segredos sobrenaturais...' },
     { id: 2, titulo: 'Breaking Bad', fotoUrl: 'assets/images/breaking-bad.webp', descricao: 'Um professor de química do ensino médio se transforma em um chefão das drogas...' },
