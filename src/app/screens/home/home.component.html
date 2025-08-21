@@ -13,7 +13,7 @@
             <button id="btn-search" type="button">
                 <i class="bi bi-search"></i>
             </button>
-            <button id="btn-account" type="button">
+            <button id="btn-account" type="button" (click)="abrirPopupConta('conta')">
                 <i class="bi bi-person-circle"></i>
             </button>
         </div>
@@ -40,7 +40,11 @@
             </button>
         </div>
     </div>
-</section> 
+</section>
+
+<section class="account-section">
+    <app-conta *ngIf="isPopupOpen && popupTipo === 'conta'" (fechar)="fecharPopup()"></app-conta>
+</section>
 
 <section class="carrossel-section">
     <app-carrossel

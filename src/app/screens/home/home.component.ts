@@ -47,8 +47,10 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
   // --- Novas propriedades para o pop-up ---
   filmeSelecionado: any | null = null; // Armazena o filme que será exibido no pop-up
   isPopupOpen: boolean = false; // Controla a visibilidade do pop-up
+  popupTipo: 'filme' | 'conta' = 'filme'; 
+  popupData: any = null; // Dados adicionais para o pop-up, se necessário
 
-  // Objeto para "La Casa de Papel" (filme em destaque)
+
   filmeHero = {
     id: 0,
     titulo: 'LA CASA DE PAPEL',
@@ -85,5 +87,11 @@ export class HomeComponent implements OnInit { // Implemente OnInit para usar ng
     this.filmeSelecionado = this.filmeHero;
     this.isPopupOpen = true;
     console.log('Abrindo pop-up do filme hero:', this.filmeHero);
+  }
+
+  abrirPopupConta(tipo: 'conta') {
+    this.popupTipo = tipo;
+    this.isPopupOpen = true;
+    console.log('Abrindo pop-up de conta');
   }
 }
